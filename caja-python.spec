@@ -2,20 +2,20 @@
 # but from Caja to Python, allowing to write Caja extensions in Python - thus our Name.
 Summary:	Python bindings for libcaja-extension library
 Summary(pl.UTF-8):	Wiązania Pythona do biblioteki libcaja-extension
-Name:		mate-file-manager-python
-Version:	1.6.1
+Name:		caja-python
+Version:	1.8.0
 Release:	1
 License:	GPL v2+
 Group:		Libraries/Python
-Source0:	http://pub.mate-desktop.org/releases/1.6/python-caja-%{version}.tar.xz
-# Source0-md5:	89c348a368350d031dfadc9b484303c5
+Source0:	http://pub.mate-desktop.org/releases/1.8/python-caja-%{version}.tar.xz
+# Source0-md5:	b737787aea7db808fff4a01ec6f08c70
 URL:		http://mate-desktop.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.9
+BuildRequires:	caja-devel >= 1.6.0
 BuildRequires:	gtk-doc >= 1.9
 BuildRequires:	libtool >= 1:1.4.3
 BuildRequires:	libxslt-progs
-BuildRequires:	mate-file-manager-devel >= 1.6.0
 BuildRequires:	pkgconfig
 BuildRequires:	python-devel >= 2.0
 # for docs generation
@@ -26,8 +26,9 @@ BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
-Requires:	mate-file-manager >= 1.6.0
+Requires:	caja >= 1.6.0
 Requires:	python-libs
+Obsoletes:	mate-file-manager-python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,6 +45,7 @@ Summary(pl.UTF-8):	Pliki programistyczne dla pythonowych rozszerzeń zarządcy p
 Group:		Development/Libraries
 # doesn't require base; the only file is pkg-config specific, so let's require it
 Requires:	pkgconfig
+Obsoletes:	mate-file-manager-python-devel
 
 %description devel
 Development files for Caja extensions written in Python.
@@ -56,6 +58,7 @@ Pythonie.
 Summary:	Python Caja API documentation
 Summary(pl.UTF-8):	Dokumentacja API Pythona dla rozszerzeń zarządcy plików Caja
 Group:		Documentation
+Obsoletes:	mate-file-manager-python-apidocs
 
 %description apidocs
 Python Caja API documentation.
@@ -67,6 +70,7 @@ Dokumentacja API Pythona dla rozszerzeń zarządcy plików Caja.
 Summary:	Example Python extensions for Caja file manager
 Summary(pl.UTF-8):	Przykładowe pythonowe rozszerzenia dla zarządcy plików Caja
 Group:		Documentation
+Obsoletes:	mate-file-manager-python-examples
 
 %description examples
 Example Python extensions for Caja file manager.
