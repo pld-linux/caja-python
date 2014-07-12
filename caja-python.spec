@@ -11,16 +11,14 @@ Source0:	http://pub.mate-desktop.org/releases/1.8/python-caja-%{version}.tar.xz
 # Source0-md5:	b737787aea7db808fff4a01ec6f08c70
 URL:		http://mate-desktop.org/
 BuildRequires:	autoconf >= 2.53
-BuildRequires:	automake >= 1:1.9
+BuildRequires:	automake >= 1:1.10
 BuildRequires:	caja-devel >= 1.6.0
 BuildRequires:	gtk-doc >= 1.9
 BuildRequires:	libtool >= 1:1.4.3
 BuildRequires:	libxslt-progs
 BuildRequires:	pkgconfig
 BuildRequires:	python-devel >= 2.0
-# for docs generation
-BuildRequires:	python-pygobject-devel >= 2.28.2
-# for binding itself (pygobject3 is preferred with no configure switch)
+# pygobject3 is preferred over pygobject 2 with no configure switch
 BuildRequires:	python-pygobject3-devel >= 3.0.0
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
@@ -91,18 +89,14 @@ Przykładowe rozszerzenia dla zarządcy plików Caja napisane w Pythonie.
 	--enable-gtk-doc \
 	--with-html-dir=%{_gtkdocdir}
 
-# docs generation parts are gobject2 specific, while configure prefers gobject3
-%{__make} \
-	PYGOBJECT_FIXXREF="%{__python} `pkg-config --variable=fixxref pygobject-2.0`" \
-	PYGOBJECT_PYGDOCS="`pkg-config --variable=pygdocs pygobject-2.0`"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	HTMLdir=%{_gtkdocdir}/caja-python \
-	PYGOBJECT_PYGDOCS="`pkg-config --variable=pygdocs pygobject-2.0`"
+	HTMLdir=%{_gtkdocdir}/caja-python
 
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/caja/extensions-2.0/*.la
 
