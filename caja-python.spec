@@ -3,12 +3,12 @@
 Summary:	Python bindings for libcaja-extension library
 Summary(pl.UTF-8):	Wiązania Pythona do biblioteki libcaja-extension
 Name:		caja-python
-Version:	1.8.0
+Version:	1.8.1
 Release:	1
 License:	GPL v2+
 Group:		Libraries/Python
 Source0:	http://pub.mate-desktop.org/releases/1.8/python-caja-%{version}.tar.xz
-# Source0-md5:	b737787aea7db808fff4a01ec6f08c70
+# Source0-md5:	9419ca3e13de36efe1c3fd60696d22cf
 URL:		http://mate-desktop.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.10
@@ -17,7 +17,7 @@ BuildRequires:	gtk-doc >= 1.9
 BuildRequires:	libtool >= 1:1.4.3
 BuildRequires:	libxslt-progs
 BuildRequires:	pkgconfig
-BuildRequires:	python-devel >= 2.0
+BuildRequires:	python-devel >= 2.7
 # pygobject3 is preferred over pygobject 2 with no configure switch
 BuildRequires:	python-pygobject3-devel >= 3.0.0
 BuildRequires:	rpm-pythonprov
