@@ -3,17 +3,18 @@
 Summary:	Python bindings for libcaja-extension library
 Summary(pl.UTF-8):	Wiązania Pythona do biblioteki libcaja-extension
 Name:		caja-python
-Version:	1.8.1
+Version:	1.10.0
 Release:	1
 License:	GPL v2+
 Group:		Libraries/Python
-Source0:	http://pub.mate-desktop.org/releases/1.8/python-caja-%{version}.tar.xz
-# Source0-md5:	9419ca3e13de36efe1c3fd60696d22cf
+Source0:	http://pub.mate-desktop.org/releases/1.10/python-caja-%{version}.tar.xz
+# Source0-md5:	2491e3b3c1ea10e9599896b7965eb002
 URL:		http://mate-desktop.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.10
 BuildRequires:	caja-devel >= 1.6.0
 BuildRequires:	gtk-doc >= 1.9
+BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libtool >= 1:1.4.3
 BuildRequires:	libxslt-progs
 BuildRequires:	pkgconfig
@@ -111,13 +112,16 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 # directory for python plugins for caja - see src/caja-python.c or caja-python.pc
 install -d $RPM_BUILD_ROOT%{_datadir}/caja-python/extensions
 
+%find_lang python-caja
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f python-caja.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_libdir}/caja/extensions-2.0/libcaja-python.so
+%{_datadir}/caja/extensions/libcaja-python.caja-extension
 %dir %{_datadir}/caja-python
 %dir %{_datadir}/caja-python/extensions
 
