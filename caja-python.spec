@@ -4,7 +4,7 @@ Summary:	Python bindings for libcaja-extension library
 Summary(pl.UTF-8):	Wiązania Pythona do biblioteki libcaja-extension
 Name:		caja-python
 Version:	1.12.0
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Libraries/Python
 Source0:	http://pub.mate-desktop.org/releases/1.12/python-caja-%{version}.tar.xz
@@ -58,6 +58,9 @@ Summary:	Python Caja API documentation
 Summary(pl.UTF-8):	Dokumentacja API Pythona dla rozszerzeń zarządcy plików Caja
 Group:		Documentation
 Obsoletes:	mate-file-manager-python-apidocs
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 Python Caja API documentation.
