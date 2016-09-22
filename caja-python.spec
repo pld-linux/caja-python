@@ -3,12 +3,12 @@
 Summary:	Python bindings for libcaja-extension library
 Summary(pl.UTF-8):	Wiązania Pythona do biblioteki libcaja-extension
 Name:		caja-python
-Version:	1.14.0
+Version:	1.16.0
 Release:	1
 License:	GPL v2+
 Group:		Libraries/Python
-Source0:	http://pub.mate-desktop.org/releases/1.14/python-caja-%{version}.tar.xz
-# Source0-md5:	8afc98de109a6771590e0b858547c461
+Source0:	http://pub.mate-desktop.org/releases/1.16/python-caja-%{version}.tar.xz
+# Source0-md5:	128396f85d415937f4e400914b544a10
 URL:		http://mate-desktop.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.10
@@ -115,7 +115,7 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 # directory for python plugins for caja - see src/caja-python.c or caja-python.pc
 install -d $RPM_BUILD_ROOT%{_datadir}/caja-python/extensions
 
-%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/{frp,jv}
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/{frp,jv,pms}
 
 %find_lang python-caja
 
