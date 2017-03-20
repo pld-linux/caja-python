@@ -19,7 +19,6 @@ BuildRequires:	libtool >= 1:1.4.3
 BuildRequires:	libxslt-progs
 BuildRequires:	pkgconfig
 BuildRequires:	python-devel >= 1:2.7
-# pygobject3 is preferred over pygobject 2 with no configure switch
 BuildRequires:	python-pygobject3-devel >= 3.0.0
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
