@@ -3,12 +3,12 @@
 Summary:	Python bindings for libcaja-extension library
 Summary(pl.UTF-8):	Wiązania Pythona do biblioteki libcaja-extension
 Name:		caja-python
-Version:	1.20.2
+Version:	1.22.0
 Release:	1
 License:	GPL v2+
 Group:		Libraries/Python
-Source0:	http://pub.mate-desktop.org/releases/1.20/python-caja-%{version}.tar.xz
-# Source0-md5:	f69df696c5cfdf63f5e6b9fee2da1f3f
+Source0:	http://pub.mate-desktop.org/releases/1.22/python-caja-%{version}.tar.xz
+# Source0-md5:	7978c262379926c45dfba8a60b5f414b
 URL:		http://mate-desktop.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.10
