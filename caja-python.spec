@@ -3,29 +3,29 @@
 Summary:	Python bindings for libcaja-extension library
 Summary(pl.UTF-8):	Wiązania Pythona do biblioteki libcaja-extension
 Name:		caja-python
-Version:	1.22.1
+Version:	1.24.0
 Release:	1
 License:	GPL v2+
 Group:		Libraries/Python
-Source0:	http://pub.mate-desktop.org/releases/1.22/python-caja-%{version}.tar.xz
-# Source0-md5:	c9ad6d5c85c217bf94daa8c81dcb8e00
+Source0:	http://pub.mate-desktop.org/releases/1.24/python-caja-%{version}.tar.xz
+# Source0-md5:	f2cee205c0914014dd35e0627c50911c
 URL:		http://mate-desktop.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.10
 BuildRequires:	caja-devel >= 1.17.1
+BuildRequires:	gettext-tools >= 0.19.8
 BuildRequires:	gtk-doc >= 1.9
-BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libtool >= 1:1.4.3
 BuildRequires:	libxslt-progs
 BuildRequires:	pkgconfig
-BuildRequires:	python-devel >= 1:2.7
-BuildRequires:	python-pygobject3-devel >= 3.0.0
+BuildRequires:	python3-devel >= 1:3.6
+BuildRequires:	python3-pygobject3-devel >= 3.0.0
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	caja >= 1.17.1
-Requires:	python-libs
+Requires:	python3-libs >= 1:3.6
 Obsoletes:	mate-file-manager-python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
