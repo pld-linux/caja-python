@@ -90,6 +90,7 @@ Przykładowe rozszerzenia dla zarządcy plików Caja napisane w Pythonie.
 %{__automake}
 %configure \
 	--enable-gtk-doc \
+	--disable-silent-rules \
 	--with-html-dir=%{_gtkdocdir}
 
 %{__make}
