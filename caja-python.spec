@@ -57,9 +57,7 @@ Summary:	Python Caja API documentation
 Summary(pl.UTF-8):	Dokumentacja API Pythona dla rozszerzeń zarządcy plików Caja
 Group:		Documentation
 Obsoletes:	mate-file-manager-python-apidocs
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 Python Caja API documentation.
