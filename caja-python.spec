@@ -9,7 +9,7 @@ License:	GPL v2+
 Group:		Libraries/Python
 Source0:	https://pub.mate-desktop.org/releases/1.26/python-caja-%{version}.tar.xz
 # Source0-md5:	08991236a39d9ad8e4c59e564786b9bd
-URL:		http://mate-desktop.org/
+URL:		https://wiki.mate-desktop.org/mate-desktop/components/python-caja/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.10
 BuildRequires:	caja-devel >= 1.17.1
@@ -20,13 +20,14 @@ BuildRequires:	libxslt-progs
 BuildRequires:	pkgconfig
 BuildRequires:	python3-devel >= 1:3.6
 BuildRequires:	python3-pygobject3-devel >= 3.0.0
+BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	caja >= 1.17.1
 Requires:	python3-libs >= 1:3.6
-Obsoletes:	mate-file-manager-python
+Obsoletes:	mate-file-manager-python < 1.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -43,7 +44,7 @@ Summary(pl.UTF-8):	Pliki programistyczne dla pythonowych rozszerzeń zarządcy p
 Group:		Development/Libraries
 # doesn't require base; the only file is pkg-config specific, so let's require it
 Requires:	pkgconfig
-Obsoletes:	mate-file-manager-python-devel
+Obsoletes:	mate-file-manager-python-devel < 1.8.0
 
 %description devel
 Development files for Caja extensions written in Python.
@@ -56,7 +57,7 @@ Pythonie.
 Summary:	Python Caja API documentation
 Summary(pl.UTF-8):	Dokumentacja API Pythona dla rozszerzeń zarządcy plików Caja
 Group:		Documentation
-Obsoletes:	mate-file-manager-python-apidocs
+Obsoletes:	mate-file-manager-python-apidocs < 1.8.0
 BuildArch:	noarch
 
 %description apidocs
@@ -69,7 +70,7 @@ Dokumentacja API Pythona dla rozszerzeń zarządcy plików Caja.
 Summary:	Example Python extensions for Caja file manager
 Summary(pl.UTF-8):	Przykładowe pythonowe rozszerzenia dla zarządcy plików Caja
 Group:		Documentation
-Obsoletes:	mate-file-manager-python-examples
+Obsoletes:	mate-file-manager-python-examples < 1.8.0
 
 %description examples
 Example Python extensions for Caja file manager.
