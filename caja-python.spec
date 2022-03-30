@@ -4,7 +4,7 @@ Summary:	Python bindings for libcaja-extension library
 Summary(pl.UTF-8):	Wiązania Pythona do biblioteki libcaja-extension
 Name:		caja-python
 Version:	1.26.0
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Libraries/Python
 Source0:	https://pub.mate-desktop.org/releases/1.26/python-caja-%{version}.tar.xz
